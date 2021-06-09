@@ -32,12 +32,12 @@ jobs:
 
         # Build react app
       - name: Build Yarn and npm
-        uses: linchpin/action-build-yarn-npm@master
+        run: npm run build
 
         # Install Surge 
       - name: Install Surge
         run: npm install -g surge
           
       - name: Deploying on Surge
-        run: surge ../../build expense-trackerbyusman.surge.sh --token ${{secrets.SURGE_TOKEN}}
+        run: surge ./build expense-trackerbyusman.surge.sh --token ${{secrets.SURGE_TOKEN}}
           
