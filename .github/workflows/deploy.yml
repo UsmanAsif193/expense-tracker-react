@@ -33,7 +33,7 @@ jobs:
 
         # Build react app
       - name: Build Yarn and npm
-        run: npm run build
+        run: yarn build
 
         # Install Surge 
       - name: Install Surge
